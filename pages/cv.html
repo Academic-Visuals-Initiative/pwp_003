@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){var t='light';try{t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){}document.documentElement.setAttribute('data-theme',t)})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dr. Coffee Bean — academic CV with research in coffee chemistry, extraction kinetics, and chocolate rheology.">
+<title>CV — Dr. Coffee Bean</title>
+<script>(function(){fetch('../data/site.json').then(function(r){return r.json()}).then(function(d){if(d.description){var m=document.querySelector('meta[name="description"]');if(m)m.content=d.description}var id=d.google_analytics;if(id){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',id);var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id='+id;s.async=true;document.head.appendChild(s)}})})();</script>
+<link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+<link rel="icon" type="image/png" href="../assets/images/logo.png">
+<link rel="apple-touch-icon" href="../assets/images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;500&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<link rel="stylesheet" href="../css/base/variables.css">
+<style>
+:root{--surface:var(--color-surface);--surface-variant:var(--color-surface-variant);--on-surface:var(--color-on-surface);--on-surface-muted:var(--color-on-surface-variant);--primary:var(--color-primary);--outline:var(--color-outline-variant);--outline-hover:var(--color-outline);--transition-speed:0.3s;--font-sans:'Hanken Grotesk',sans-serif;--font-display:'EB Garamond',serif;--font-mono:'JetBrains Mono',monospace}
+@media(max-width:1024px){#zoom-in,#zoom-out{display:none}}
+[data-theme="dark"] .theme-icon-dark{display:none}
+[data-theme="light"] .theme-icon-light{display:none}
+*{box-sizing:border-box;margin:0;padding:0}
+body{margin:10px;font-family:var(--font-sans);background:var(--surface);color:var(--on-surface);display:flex;justify-content:center;align-items:stretch;height:100dvh;-webkit-font-smoothing:antialiased;transition:background var(--transition-speed),color var(--transition-speed)}
+@media(min-width:768px){body{padding:20px}}
+.viewer-card{width:100%;max-width:1100px;background:var(--surface-variant);border:1px solid var(--outline);display:flex;flex-direction:column;flex:1;min-height:0;position:relative}
+.viewer-toolbar{display:flex;justify-content:space-between;align-items:center;padding:10px 15px;background:var(--surface);border-bottom:1px solid var(--outline);gap:8px}
+.toolbar-group{display:flex;align-items:center;gap:8px}
+.btn-custom{background:var(--surface);border:1px solid var(--outline);color:var(--on-surface-muted);padding:8px 12px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-family:var(--font-mono)}
+.btn-custom:hover{background:var(--surface-variant);border-color:var(--outline-hover);color:var(--on-surface)}
+.btn-custom:disabled{opacity:0.3;cursor:not-allowed}
+@media(min-width:768px){.btn-custom{padding:8px 16px;font-size:0.8rem}}
+.page-counter{font-size:0.8rem;font-weight:600;color:var(--on-surface);white-space:nowrap}
+.page-counter span{color:var(--on-surface-muted);font-weight:400}
+.viewer-workspace{display:flex;flex:1;overflow:hidden;position:relative}
+.viewer-sidebar{width:180px;background:var(--surface);border-right:1px solid var(--outline);overflow-y:auto;padding:15px;display:flex;flex-direction:column;gap:16px;transition:transform 0.3s ease;z-index:100}
+@media(max-width:767px){.viewer-sidebar{display:none!important}}
+.viewer-sidebar.hidden{display:none}
+.thumb-wrapper{cursor:pointer;border:1px solid var(--outline);background:var(--surface-variant);padding:6px;display:flex;flex-direction:column;align-items:center;transition:border-color 0.15s}
+.thumb-wrapper:hover,.thumb-wrapper.active{border-color:var(--primary)}
+.thumb-canvas{display:block;width:100%;height:auto;border:1px solid var(--outline)}
+.thumb-label{font-size:0.7rem;font-weight:600;color:var(--on-surface-muted);margin-top:6px;text-transform:uppercase;letter-spacing:0.05em;font-family:var(--font-mono)}
+.thumb-wrapper.active .thumb-label{color:var(--primary)}
+.canvas-container{flex:1;padding:15px;background:var(--surface);display:flex;justify-content:center;align-items:flex-start;overflow:auto}
+@media(min-width:768px){.canvas-container{padding:30px}}
+.canvas-shadow{box-shadow:0 10px 30px rgba(0,0,0,0.06);background:#fff;max-width:100%}
+canvas{display:block;max-width:100%;height:auto!important}
+[data-theme="dark"] .canvas-shadow,
+[data-theme="dark"] .thumb-canvas{filter:grayscale(100%) brightness(0.8)}
+#loading-indicator{display:flex;align-items:center;justify-content:center;color:var(--on-surface-muted);font-size:0.95rem;width:100%;height:100%;font-family:var(--font-mono)}
+</style>
+</head>
+<body>
+<div class="viewer-card">
+    <div class="viewer-toolbar">
+        <div class="toolbar-group">
+            <a href="../" class="btn-custom">Back</a>
+        </div>
+        <div class="toolbar-group">
+            <div class="page-counter"><span id="page-num">0</span> / <span id="page-count">0</span></div>
+        </div>
+        <div class="toolbar-group">
+            <button class="btn-custom" id="zoom-out" disabled>-</button>
+            <button class="btn-custom" id="zoom-in" disabled>+</button>
+            <button class="btn-custom" id="download-btn">Download</button>
+            <button class="btn-custom" id="theme-toggle-cv"><svg class="theme-icon theme-icon-dark" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg><svg class="theme-icon theme-icon-light" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm113-170q-70-70-70-170t70-170q70-70 170-70t170 70q70 70 70 170t-70 170q-70 70-170 70t-170-70Zm283-57q47-47 47-113t-47-113q-47-47-113-47t-113 47q-47 47-47 113t47 113q47 47 113 47t113-47ZM480-480Z"/></svg></button>
+        </div>
+    </div>
+    <div class="viewer-workspace">
+        <div class="viewer-sidebar hidden" id="sidebar"></div>
+        <div class="canvas-container" id="canvas-container">
+            <div id="loading-indicator">Loading PDF...</div>
+            <div class="canvas-shadow" id="canvas-wrapper" style="display:none"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(){
+    var theme='light';try{theme=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}catch(e){}
+    document.documentElement.setAttribute('data-theme',theme);
+})();
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+var pdfDoc=null,scale=1.1;
+var zoomInBtn=document.getElementById('zoom-in');
+var zoomOutBtn=document.getElementById('zoom-out');
+var pageNumEl=document.getElementById('page-num');
+var pageCountEl=document.getElementById('page-count');
+var loadingIndicator=document.getElementById('loading-indicator');
+var canvasWrapper=document.getElementById('canvas-wrapper');
+var sidebar=document.getElementById('sidebar');
+var canvasContainer=document.getElementById('canvas-container');
+
+function renderAllPages(){
+    canvasWrapper.innerHTML='';
+    pageCountEl.textContent=pdfDoc.numPages;
+    for(var i=1;i<=pdfDoc.numPages;i++){
+        (function(pageNum){
+            pdfDoc.getPage(pageNum).then(function(page){
+                var dpr=window.devicePixelRatio||1;
+                var viewport=page.getViewport({scale:scale});
+                var wrapper=document.createElement('div');
+                wrapper.className='canvas-shadow';
+                wrapper.style.marginBottom='16px';
+                var cvs=document.createElement('canvas');
+                cvs.dataset.page=pageNum;
+                cvs.style.width=viewport.width+'px';
+                cvs.style.height=viewport.height+'px';
+                cvs.height=Math.floor(viewport.height*dpr);
+                cvs.width=Math.floor(viewport.width*dpr);
+                wrapper.appendChild(cvs);
+                canvasWrapper.appendChild(wrapper);
+                page.render({canvasContext:cvs.getContext('2d'),viewport:viewport,transform:[dpr,0,0,dpr,0,0]});
+            });
+        })(i);
+    }
+}
+
+function generateThumbnails(){
+    sidebar.innerHTML='';
+    sidebar.classList.remove('hidden');
+    if(window.innerWidth>=768) sidebar.classList.add('active'); else sidebar.classList.remove('active');
+    for(var i=1;i<=pdfDoc.numPages;i++){
+        (function(idx){
+            var thumbWrapper=document.createElement('div');
+            thumbWrapper.className='thumb-wrapper'+(idx===1?' active':'');
+            thumbWrapper.setAttribute('data-page',idx);
+            var thumbCanvas=document.createElement('canvas');
+            thumbCanvas.className='thumb-canvas';
+            var thumbLabel=document.createElement('div');
+            thumbLabel.className='thumb-label';
+            thumbLabel.textContent='Page '+idx;
+            thumbWrapper.appendChild(thumbCanvas);
+            thumbWrapper.appendChild(thumbLabel);
+            sidebar.appendChild(thumbWrapper);
+            pdfDoc.getPage(idx).then(function(page){
+                var dpr=window.devicePixelRatio||1;
+                var viewport=page.getViewport({scale:0.18});
+                var tCtx=thumbCanvas.getContext('2d');
+                thumbCanvas.style.width=viewport.width+'px';
+                thumbCanvas.style.height=viewport.height+'px';
+                thumbCanvas.height=Math.floor(viewport.height*dpr);
+                thumbCanvas.width=Math.floor(viewport.width*dpr);
+                page.render({canvasContext:tCtx,viewport:viewport,transform:[dpr,0,0,dpr,0,0]});
+            });
+            thumbWrapper.addEventListener('click',function(){
+                var target=canvasWrapper.querySelector('canvas[data-page="'+idx+'"]');
+                if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+                document.querySelectorAll('.thumb-wrapper').forEach(function(el){el.classList.remove('active');});
+                thumbWrapper.classList.add('active');
+                if(window.innerWidth<768) sidebar.classList.remove('active');
+            });
+        })(i);
+    }
+}
+
+function onZoomIn(){if(!pdfDoc) return; scale*=1.25; renderAllPages();}
+function onZoomOut(){if(!pdfDoc||scale<=0.3) return; scale/=1.25; renderAllPages();}
+
+canvasContainer.addEventListener('scroll',function(){
+    var canvases=canvasWrapper.querySelectorAll('canvas[data-page]');
+    var containerTop=canvasContainer.scrollTop+100;
+    var current=1;
+    canvases.forEach(function(c){
+        var top=c.offsetTop;
+        if(top<=containerTop) current=parseInt(c.dataset.page);
+    });
+    pageNumEl.textContent=current;
+    document.querySelectorAll('.thumb-wrapper').forEach(function(el){
+        el.classList.remove('active');
+        if(parseInt(el.getAttribute('data-page'))===current) el.classList.add('active');
+    });
+});
+
+function loadPDF(source){
+    loadingIndicator.style.display='none';
+    canvasWrapper.style.display='block';
+    pdfjsLib.getDocument(source).promise.then(function(pdfDoc_){
+        pdfDoc=pdfDoc_;
+        zoomInBtn.disabled=false;
+        zoomOutBtn.disabled=false;
+        generateThumbnails();
+        renderAllPages();
+    }).catch(function(){loadingIndicator.textContent='Could not load PDF.';});
+}
+
+zoomInBtn.addEventListener('click',onZoomIn);
+zoomOutBtn.addEventListener('click',onZoomOut);
+document.getElementById('download-btn').addEventListener('click',function(){
+    var a=document.createElement('a');
+    a.href=pdfUrl;
+    a.download='cv.pdf';
+    a.click();
+});
+
+document.getElementById('theme-toggle-cv').addEventListener('click',function(){var t=document.documentElement.getAttribute('data-theme');var n=t==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
+var pdfUrl='../assets/cv.pdf';
+var params=new URLSearchParams(location.search);
+if(params.get('url')) pdfUrl=params.get('url');
+loadPDF(pdfUrl);
+</script>
+</body>
+</html>
