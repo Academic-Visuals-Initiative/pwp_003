@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<script>
+(function(){
+    var t = 'light';
+    try { t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch(e) {}
+    document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<script>
+(function(){fetch('data/site.json').then(function(r){return r.json()}).then(function(d){if(d.description){var m=document.querySelector('meta[name=\"description\"]');if(m)m.content=d.description}var id=d.google_analytics;if(id){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',id);var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id='+id;s.async=true;document.head.appendChild(s)}})})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dr. Coffee Bean — professor of coffee chemistry.">
+<title>404 — Page Not Found</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--color-background:#ffffff;--color-on-background:#000000;--color-on-surface-variant:#4a4a4a;--color-primary:#000000;--color-outline-variant:#dbdbdb;--font-display:'EB Garamond',serif;--font-label:'JetBrains Mono',monospace}
+[data-theme="dark"]{--color-background:#0a0a0a;--color-on-background:#ffffff;--color-on-surface-variant:#a3a3a3;--color-primary:#ffffff;--color-outline-variant:#333333}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--color-background);color:var(--color-on-background);font-family:var(--font-display);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:2rem}
+h1{font-size:6rem;font-weight:700;letter-spacing:-0.05em;margin-bottom:0.5rem;text-transform:uppercase}
+p{font-size:1.2rem;color:var(--color-on-surface-variant);margin-bottom:2.5rem;max-width:28rem;line-height:1.6}
+.divider{width:3rem;height:2px;background:var(--color-primary);margin-bottom:2.5rem}
+a{color:var(--color-primary);text-decoration:none;font-family:var(--font-label);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;padding:0.75rem 1.5rem;border:1px solid var(--color-primary);transition:background-color 0.2s,color 0.2s}
+a:hover{background:var(--color-primary);color:var(--color-background)}
+</style>
+</head>
+<body>
+    <h1>404</h1>
+    <div class="divider"></div>
+    <p>This page is brewing elsewhere. It may have moved or never existed.</p>
+    <a href="./">← Back to Home</a>
+</body>
+</html>
