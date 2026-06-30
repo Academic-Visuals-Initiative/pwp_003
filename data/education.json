@@ -1,0 +1,107 @@
+{
+    "type": "education",
+    "id": "education",
+    "data": {
+        "heading_label": "02 / TIMELINE",
+        "heading": "Education",
+        "description": "My academic experience can be described as many long nights, caffeine overdose and fascination with understanding the mechanisms of how the world functions especially those of coffee and chocolate.\n\nGradually I have come to an understanding that doing research is basically the process of failure until something starts working the way it should and each failure is an excellent pretext for going down to the department kitchen, making another pot of coffee and starting everything from scratch with another hypothesis.\n\nAlthough I do not have all the answers yet or even my favorite green mug at the moment I have learned that trying and failing is a natural part of learning process. All in all, as long as there is enough coffee and chocolate, any other obstacle can be overcome.",
+        "items": [
+         {
+             "tab_num": "01 / APPOINTMENT",
+             "date": "2020 \u2014 PRESENT",
+             "badge": "Assistant Professor",
+             "title": "Assistant Professor of Coffee Chemistry",
+            "institution":"Department of Molecular Brewing, Caffeine Institute",
+            "highlights_label":"Grants & Awards",
+            "highlights":[
+               "NSF CAREER Award: \u201CPour-Over Dynamics and Thermal Extraction\u201D ($550K)",
+               "National Coffee Association Early Career Research Grant ($75K)"
+            ],
+            "link":{
+               "text":"Lab Website",
+               "url":"#"
+            },
+            "specs":[
+               {
+                  "key":"TEACHING",
+                  "val":"CHEM 201 \u2014 Intro to Brewing Science\nCHEM 305 \u2014 Advanced Extraction Kinetics\nCHEM 410 \u2014 Caffeine Chemistry Lab"
+               },
+               {
+                  "key":"SERVICE",
+                  "val":"● Graduate Admissions Committee (2021\u2013Present)\n● Undergraduate Research Coordinator (2022\u2013Present)"
+               },
+               {
+                  "key":"MENTORING",
+                  "val":"Supervised 3 Ph.D. students, \n 5 M.Sc. theses,  \n8 undergraduate research projects",
+                  "span": true
+               }
+            ]
+         },
+            {
+                "tab_num": "02 / RESEARCH",
+                "date": "2020 \u2014 2022",
+                "badge": "Postdoc",
+                "title": "Postdoctoral Researcher in Confectionery Materials Science",
+                "institution": "School of Confectionery Engineering, Cocoa Research Lab",
+                "highlights_label": "Publications & Output",
+                "highlights": [
+                    "First-author paper in Journal of Food Engineering (2021)",
+                    "Co-authored 3 peer-reviewed articles on chocolate rheology"
+                ],
+                "specs": [
+                    {
+                        "key": "Project Focus",
+                        "val": "Fluid dynamics of molten chocolate: evaluating the effect of airflow velocity on surface gloss, snap acoustics, and crystal formation."
+                    },
+                    {
+                        "key": "Collaborators",
+                        "val": "Nestl\u00e9 Research Center (industry partner)\nETH Zurich \u2014 Food Process Engineering"
+                    },
+                    {
+                        "key": "Techniques",
+                        "val": "Rheometry, differential scanning calorimetry, X-ray diffraction, acoustic emission testing",
+                        "span": true
+                    }
+                ]
+            },
+            {
+                "tab_num": "03 / DOCTORATE",
+                "date": "GRADUATED 2022",
+                "badge": "Ph.D.",
+                "title": "Doctor of Philosophy in Caffeine Chemistry",
+                "institution": "Department of Molecular Brewing, Bean University",
+                "specs": [
+                    {
+                        "key": "Dissertation",
+                        "val": "Kinetic modeling of caffeine extraction: temperature, pressure, and grind size as control variables in pour-over thermodynamics."
+                    },
+                    {
+                        "key": "Advisory Board",
+                        "val": "Dr. Percolator (Chair), Prof. French Press, Dr. Moka Pot"
+                    },
+                    {
+                        "key": "Methodology",
+                        "val": "Liquid chromatography, spectroscopic profiling, double-blind cupping trials.",
+                        "span": true
+                    }
+                ]
+            },
+            {
+                "tab_num": "04 / GRADUATE",
+                "date": "GRADUATED 2018",
+                "badge": "M.Sc.",
+                "title": "Master of Science in Chocolate Aerodynamics",
+                "institution": "School of Confectionery Engineering, Cocoa Institute",
+                "description": "Thesis research focused on the aerodynamic drag metrics of mocha chocolate shavings during localized thermal distribution sweeps."
+            },
+            {
+                "tab_num": "05 / UNDERGRADUATE",
+                "date": "GRADUATED 2016",
+                "badge": "B.A.",
+                "title": "Bachelor of Arts in Coffeehouse Philosophy",
+                "institution": "Department of Existential Brewing, Cafe College",
+                "description": "Explored the phenomenological implications of morning waiting cycles and collective mood metrics under varying environmental factors."
+            }
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dr. Coffee Bean — blog about coffee chemistry, extraction kinetics, and chocolate rheology.">
+<title>Blog — Dr. Coffee Bean</title>
+<script>(function(){fetch('../data/site.json').then(function(r){return r.json()}).then(function(d){if(d.description){var m=document.querySelector('meta[name="description"]');if(m)m.content=d.description}var id=d.google_analytics;if(id){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',id);var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id='+id;s.async=true;document.head.appendChild(s)}})})();</script>
+<link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+<link rel="icon" type="image/png" href="../assets/images/logo.png">
+<link rel="apple-touch-icon" href="../assets/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/base/variables.css">
+<link rel="stylesheet" href="../css/base/reset.css">
+<link rel="stylesheet" href="../css/components/blog-detailed.css">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<style>
+nav{position:sticky;top:0;background:var(--color-background);z-index:100;border-bottom:1px solid var(--color-outline-variant);padding:1rem 0}
+.nav-container{max-width:var(--max-width,52rem);width:100%;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--color-primary);text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-btn{background:transparent;border:1px solid var(--color-outline-variant);color:var(--color-on-surface-variant);padding:0.3rem 0.7rem;font-size:0.7rem;text-transform:uppercase;cursor:pointer;text-decoration:none;display:flex;align-items:center;font-family:var(--font-label)}
+.nav-btn:hover{border-color:var(--color-primary);color:var(--color-primary)}
+.theme-btn{background:none;border:none;cursor:pointer;color:var(--color-on-surface-variant);padding:0.2rem 0.3rem;display:flex;align-items:center;font-size:1.1rem}
+.theme-btn:hover{color:var(--color-primary)}
+.theme-btn img{filter:brightness(0);transition:opacity 0.2s;width:20px;height:20px;max-width:none}
+[data-theme="dark"] .theme-btn img{filter:brightness(0) invert(1)}
+.theme-btn:hover img{opacity:0.7}
+[data-theme="dark"] .theme-icon-dark{display:none}
+[data-theme="light"] .theme-icon-light{display:none}
+.thick-divider{border:none;border-top:2px solid var(--color-primary);margin:3rem auto;width:100%;max-width:var(--max-width,52rem);padding:0 24px;box-sizing:border-box}footer{display:none;width:100%;padding:3rem 0;text-align:center;}.footer-container{max-width:var(--max-width,52rem);margin:0 auto;padding:0 24px}.footer-logo{font-family:var(--font-headline);font-size:1.5rem;color:var(--color-primary);font-weight:700;margin-bottom:0.25rem}.footer-tagline{font-size:0.85rem;color:var(--color-on-surface-variant);font-style:italic;margin-bottom:0.5rem}.footer-credit{font-family:var(--font-label);font-size:10px;color:var(--color-on-surface-variant);margin-top:1rem;text-transform:uppercase;letter-spacing:0.1em}.footer-credit a{color:var(--color-on-surface-variant);text-decoration:underline}.footer-credit a:hover{color:var(--color-primary)}@media(max-width:640px){nav{padding:0.75rem 0}.nav-container{padding:0 16px}.nav-logo{font-size:1rem}.nav-btn{font-size:0.65rem;padding:0.25rem 0.5rem}.footer-container{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo" id="brandName"></a>
+    <div class="nav-right">
+      <a href="../index.html" class="nav-btn">Home</a>
+      <button class="theme-btn" data-toggle-theme aria-label="Toggle theme">
+        <img class="theme-icon-dark" src="../assets/icons/system icons/dark_mode.svg" alt="Dark mode" width="20" height="20">
+        <img class="theme-icon-light" src="../assets/icons/system icons/light_mode.svg" alt="Light mode" width="20" height="20">
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="container" id="app">
+  <div class="loading">Loading posts...</div>
+</main>
+
+<hr class="thick-divider">
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo" id="footerName"></div>
+    <div class="footer-tagline" id="footerTagline"></div>
+    <div class="footer-credit">Designed by <a href="https://www.academicvisualsinitiative.org" target="_blank">Academic Visuals Initiative (AVI)</a>. Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>. Hosted on <a href="https://github.com" target="_blank">GitHub</a>.</div>
+  </div>
+</footer>
+
+<script>
+var IMG_PREFIX = '../';
+function setTheme(t) { document.documentElement.setAttribute('data-theme', t); try { localStorage.setItem('theme', t); } catch(e) {} }
+function toggleTheme() { var c = document.documentElement.getAttribute('data-theme') || 'light'; setTheme(c === 'light' ? 'dark' : 'light'); }
+setTheme(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+document.addEventListener('click', function(e) { if (e.target.closest('[data-toggle-theme]')) { e.preventDefault(); toggleTheme(); } });
+fetch('../data/site.json').then(function(r){return r.json()}).then(function(d){var el=document.getElementById('brandName');if(el&&d.name)el.textContent=d.name;var fn=document.getElementById('footerName');var ft=document.getElementById('footerTagline');if(fn&&d.name)fn.textContent=d.name;if(ft&&d.footer&&d.footer.tagline)ft.innerHTML=d.footer.tagline.replace(/\n/g,'<br>');var f=document.querySelector('footer');if(f)f.style.display='block'}).catch(function(){});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="../js/utils/blog-detailed.js?v=2"></script>
+</body>
+</html>
