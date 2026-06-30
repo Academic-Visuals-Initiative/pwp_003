@@ -1,0 +1,15 @@
+{
+   "type":"hero",
+   "id":"hero",
+
+   
+   "data":{
+      "badge":"Hello & Welcome!",
+      "name":"It's all about",
+      "accent":"Coffee.",
+      "tagline":"Coffee is technically a fruit ",
+      "description":"Hey, I'm Bean. I'm a professor of coffee chemistry at Caffeine Tech. I study coffee and how it is grown, made, and enjoyed in different places and cultures. My work looks at how coffee is prepared, shared, and experienced, and how it brings people together. I am especially interested in how different roasting and brewing methods affect flavor, aroma, and quality, and how coffee continues to shape daily life around the world.",
+      "image":"assets/images/hero/hero.jpg",
+      "image_alt":"Coffee beans on a wooden table"
+   }
+}

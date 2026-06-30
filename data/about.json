@@ -1,0 +1,53 @@
+{
+   "type":"about",
+   "id":"about",
+
+
+
+   "data":{
+      "heading_label":"01 / ORIGIN",
+      "heading":"A Bit About Me",
+      "image":"assets/images/about/profile.webp",
+      "image_alt":"Dr. Coffee Bean in the lab",
+
+      "paragraphs":[
+         "I completed my PhD in Coffee Science at Caffeine Tech in 2025. My dissertation, The Science of a Better Cup: Understanding Coffee Flavor Through Roasting and Brewing, explored how different roasting and brewing methods change the taste, aroma, and quality of coffee. By combining chemistry, sensory testing, and food science, I showed how small changes in the coffee-making process can have a big impact on the final cup.",
+         "My research brings together coffee chemistry, brewing science, and sensory analysis to better understand how coffee is made and enjoyed. I study how factors such as coffee beans, roasting, grinding, and brewing influence flavor and consistency. More broadly, I am interested in making coffee better for both professionals and everyday coffee drinkers by connecting scientific research with practical brewing techniques.",
+         "My main goal right now is to find my favorite green coffee cup, which seems to have vanished entirely. I have a strong suspicion it is currently sitting in the back of the microwave from a previous reheating attempt, or perhaps hiding behind a towering stack of paperwork I am actively avoiding. Until it turns up, my routine feels slightly incomplete, as drinking coffee from any other vessel just doesn't offer the same comfort."
+
+      ],
+
+      "skills":[
+         {
+            "category":"Languages",
+            "items":[
+               "English (Native)",
+               "Sinhala (Native)"
+            ]
+         },
+
+         {
+            "category":"Tools",
+            "items":[
+               "Moisture Meter",
+               "Espresso Machine",
+               "Coffee Grinder",
+               "Git",
+               "Python"
+            ]
+         },
+
+         {
+            "category":"Skills",
+            "items":[
+               "Coffee Brewing",
+               "Extraction Kinetics",
+               "Chocolate Rheology",
+               "Pour-Over Dynamics",
+               "Lab Management"
+            ]
+         }
+         
+      ]
+   }
+}

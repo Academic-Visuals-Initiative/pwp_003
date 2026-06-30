@@ -1,0 +1,139 @@
+{
+   "type":"education",
+   "id":"education",
+
+
+   "data":{
+      "heading_label":"02 / TIMELINE",
+      "heading":"Education",
+      "description":"My academic journey has involved many late nights, lots of coffee, and a growing curiosity about how coffee is grown, roasted, brewed, and enjoyed. \n\nOver time, I have learned that research is mostly a process of trial and error. Every experiment that does not go as planned is a good excuse to make another cup of coffee, think through a new idea, and try again. \n\nI certainly do not have all the answers yet, but I have learned that making mistakes is part of learning. As long as there is good coffee nearby, every challenge feels a little easier to overcome.",
+
+
+      "items":[
+
+         {
+            "tab_num":"01 / APPOINTMENT",
+            "date":"2020 — PRESENT",
+            "badge":"Professor",
+            "title":"Professor of Coffee Chemistry",
+            "institution":"Department of Coffee Science, Caffeine Tech",
+            "location":"San Francisco, CA",
+            "highlights_label":"Research & Awards",
+            "highlights":[
+               "Golden Bean Research Award for Coffee Brewing Innovation",
+               "International Coffee Science Fellowship"
+            ],
+            "link":{
+               "text":"Coffee Lab",
+               "url":"#"
+            },
+            "specs":[
+
+               {
+                  "key":"TEACHING",
+                  "val":"COFF 101 — Introduction to Coffee\nCOFF 220 — Brewing Methods\nCOFF 350 — Coffee Chemistry Lab"
+               },
+
+               {
+                  "key":"RESEARCH AREAS",
+                  "val":"● Coffee brewing\n● Flavor chemistry\n● Roasting science\n● Sensory evaluation"
+               },
+
+               {
+                  "key":"MENTORING",
+                  "val":"Supervised 4 Ph.D. students,\n6 M.Sc. students,\n15 undergraduate coffee research projects",
+                  "span":true
+               }
+
+            ]
+         },
+
+
+         {
+            "tab_num":"02 / RESEARCH",
+            "date":"2020 — 2022",
+            "badge":"Postdoc",
+            "title":"Postdoctoral Researcher in Coffee Materials Science",
+            "institution":"Coffee Materials Lab, Caffeine Tech",
+            "location":"San Francisco, CA",
+            "highlights_label":"Research Output",
+            "highlights":[
+               "First-author paper on coffee extraction and flavor balance (2021)",
+               "Co-authored 3 peer-reviewed studies on brewing dynamics"
+            ],
+            "specs":[
+
+               {
+                  "key":"Project Focus",
+                  "val":"Flow and extraction in brewed coffee: studying how water temperature, pressure, and grind size affect flavor, strength, and clarity."
+               },
+
+               {
+                  "key":"Collaborators",
+                  "val":"Global Coffee Research Alliance\nUniversity of Zurich — Food Science Group"
+               },
+
+               {
+                  "key":"Techniques",
+                  "val":"Rheology, spectroscopy, particle size analysis, sensory cupping tests",
+                  "span":true
+               }
+
+            ]
+         },
+
+
+         {
+            "tab_num":"03 / DOCTORATE",
+            "date":"GRADUATED 2022",
+            "badge":"Ph.D.",
+            "title":"Doctor of Philosophy in Coffee Science",
+            "institution":"Department of Coffee Studies, Bean University",
+            "location":"Boston, MA",
+            "specs":[
+
+               {
+                  "key":"Dissertation",
+                  "val":"How coffee brewing works: studying how temperature, water pressure, and grind size affect taste and strength."
+               },
+
+               {
+                  "key":"Advisory Board",
+                  "val":"Dr. Percolator (Chair), Prof. French Press, Dr. Moka Pot"
+               },
+
+               {
+                  "key":"Methodology",
+                  "val":"Chemical analysis, flavor testing, and blind coffee tasting sessions.",
+                  "span":true
+               }
+
+            ]
+         },
+
+
+         {
+            "tab_num":"04 / GRADUATE",
+            "date":"GRADUATED 2018",
+            "badge":"M.Sc.",
+            "title":"Master of Science in Coffee Studies",
+            "institution":"School of Coffee Science, Bean Institute",
+            "location":"Chicago, IL",
+            "description":"Thesis research focused on how brewing methods affect coffee flavor, strength, and aroma during extraction."
+         },
+
+
+         {
+            "tab_num":"05 / UNDERGRADUATE",
+            "date":"GRADUATED 2016",
+            "badge":"B.A.",
+            "title":"Bachelor of Arts in Coffee Studies",
+            "institution":"Department of Coffee Culture, Cafe College",
+            "location":"Portland, OR",
+            "description":"Studied coffee culture, café experiences, and how people enjoy and share coffee in everyday life."
+         }
+
+         
+      ]
+   }
+}
